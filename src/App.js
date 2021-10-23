@@ -1,12 +1,15 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Router } from "@reach/router";
 
-import HomePage from './pages/homepage/homepage.component';
+import HomePage from "./pages/homepage/homepage.component";
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <Router>
+        <HomePage exact path="/" />
+      </Router>
     </div>
   );
 }
